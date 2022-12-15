@@ -34,16 +34,20 @@ function pEcho($string) {
 
 echo '<h1>Bonjour tout le monde ! 👻</h1>';
 
-$client = new CompteClient("Toto Totovitch", "Totov", '666666');
+$client = new CompteClient("Totov", "Toto Totovitch", '666666');
 
 preformatEcho($client);
 
-$client = new CompteClient("Anthony", "HOULALA", '10241024');
+$client = new CompteClient("HOULALA", "Anthony", '10241024');
 $compte = new CompteCourant($client, 1000, 20);
 
 preformatEcho($compte);
 
-$client = new CompteClient("Saturnin", "COLVERT", '33333333');
+$client->setPrenom('Antoinette');
+
+preformatEcho($compte);
+
+$client = new CompteClient("COLVERT", "Saturnin", '33333333');
 $compte = new CompteEpargne($client, 1000, 5);
 
 preformatEcho($compte);
